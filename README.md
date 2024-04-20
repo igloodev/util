@@ -11,8 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Useful utility function & widgets
 
 ## Features
 
@@ -22,28 +21,17 @@ know whether this package might be useful for them.
     - Parsing class for model parsing
     - Utils method
         - getMaskedString
-        
 
-
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+### for more info see example
 
 ```dart
-const like = 'sample';
+Util.getMaskedString(string: "abcdefghijklmno", maskedLength: 5)  => *****fghijklmno
+Util.getMaskedString(string: "abcdefghijklmno", maskAt: MaskAt.end, maskedLength: 5), => abcdefghij*****
+Util.getMaskedString(string: "abcdefghijklmno", maskAt: MaskAt.middle, maskedLength: 5), => abcde*****klmno
+
+SizeConstant.getHeightSpace(height: 10) // return empty widget having width 0px && height 10px
+SizeConstant.getWidthSpace(width: 10) // return empty widget having width 10px && height 0px
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.

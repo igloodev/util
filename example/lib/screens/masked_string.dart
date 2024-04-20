@@ -58,7 +58,7 @@ class MaskedString extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  Util.getMaskedString(str: "abcdefghijklmno", maskedLength: 5),
+                  Util.getMaskedString(string: "abcdefghijklmno", maskedLength: 5),
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
@@ -74,7 +74,7 @@ class MaskedString extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  Util.getMaskedString(str: "abcdefghijklmno", maskAt: MaskAt.end, maskedLength: 5),
+                  Util.getMaskedString(string: "abcdefghijklmno", maskAt: MaskAt.end, maskedLength: 5),
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
@@ -90,7 +90,7 @@ class MaskedString extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  Util.getMaskedString(str: "abcdefghijklmno", maskAt: MaskAt.middle, maskedLength: 5),
+                  Util.getMaskedString(string: "abcdefghijklmno", maskAt: MaskAt.middle, maskedLength: 5),
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
