@@ -51,7 +51,9 @@ class Parsing {
       try {
         final newData = jsonDecode(data);
         if (newData is List) return newData;
-      } catch (e) {}
+      } catch (e) {
+        return makeNull ? null : [];
+      }
     }
     return makeNull ? null : [];
   }
@@ -64,19 +66,22 @@ class Parsing {
       try {
         final newData = jsonDecode(data);
         if (newData is Map) return newData.map((key, value) => MapEntry(key.toString(), value));
-      } catch (e) {}
+      } catch (e) {
+        return makeNull ? null : {};
+      }
     }
     return makeNull ? null : {};
   }
 
   /// Get Map from Dynamic Data
   static Map<String, dynamic>? cloneMap(Map<String, dynamic> data, {bool makeNull = false}) {
-    if (null == data) return makeNull ? null : {};
     try {
       final stringData = jsonEncode(data);
       final newData = jsonDecode(stringData);
       if (newData is Map) return newData.map((key, value) => MapEntry(key.toString(), value));
-    } catch (e) {}
+    } catch (e) {
+      return makeNull ? null : {};
+    }
     return makeNull ? null : {};
   }
 
