@@ -14,7 +14,6 @@ class Util {
             } else {
               final initialVisible = ((str.length / 2) - (maskedLength ~/ 2)).toInt()  - 1;
               return "${str.substring(0, initialVisible)}${maskedChar * maskedLength}${str.substring((initialVisible + maskedLength))}";
-              return "";
             }
           } else {
             if (_isEven(maskedLength)) {
